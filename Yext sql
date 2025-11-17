@@ -3,3 +3,12 @@ FROM users u
 JOIN posts p ON u.user_id = p.user_id
 ORDER BY p.engagement_score DESC
 LIMIT 4;
+
+
+
+SELECT DISTINCT T1.SupplierName
+FROM TBL_Supplier AS T1
+INNER JOIN TBL_Products AS T2
+ON T1.ID = T2.SupplierID
+WHERE T2.price < 50
+ORDER BY T1.SupplierName ASC;
